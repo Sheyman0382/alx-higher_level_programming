@@ -9,7 +9,6 @@ if __name__ == "__main__":
         sys.exit(1)
     elif length > 4:
         operator = "*"
-        b = int(argv[length - 1])
     else:
         operator = argv[2]
     b = int(argv[length - 1])
