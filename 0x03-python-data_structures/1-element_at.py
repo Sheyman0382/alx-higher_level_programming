@@ -5,5 +5,4 @@ def element_in_index(my_list, idx):
     elif idx > len(my_list) - 1:
         return (None)
     else:
-        my_list.pop(idx)
-        return (my_list)
+        return (my_list[idx])
