@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+#2-square.py by Adegbite seyi
+
 """A module that defines a square"""
 
 class Square:
