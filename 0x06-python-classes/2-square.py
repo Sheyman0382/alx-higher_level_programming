@@ -2,7 +2,7 @@
 """A module that defines a square"""
 
 class Square:
-    "A class that is tailored for a square"""
+    """A class that is tailored for a square"""
 
     def __init__(self, size=0):
         """initializes the attribute for the class square
