@@ -5,7 +5,7 @@ class Square:
     """A class that is tailored for a square"""
 
     def __init__(self, size=0):
-        """A class that represents a square
+        """Initializes the square class
         Args:
             size: the size of the square
         Raises:
@@ -23,6 +23,6 @@ class Square:
     def area(self):
         """
         Calculates the area of the square
-        Returns: the area of the square class
+        Returns: the square of the class
         """
         return self.__size **2
