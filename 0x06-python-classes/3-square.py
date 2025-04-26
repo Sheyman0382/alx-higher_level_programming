@@ -2,10 +2,10 @@
 """A module that defines a square"""
 
 class Square:
-    "A class that is tailored for a square"""
+    """A class that is tailored for a square"""
 
     def __init__(self, size=0):
-        """initializes the attribute for the class square
+        "A class that represents a square"
         Args:
             size: the size of the square
         Raises:
@@ -14,7 +14,7 @@ class Square:
         """
 
         if not isinstance(size, int):
-            raise TypeError("Size must be an integer")
+            raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
 
