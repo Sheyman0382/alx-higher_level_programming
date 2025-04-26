@@ -5,7 +5,7 @@ class Square:
     """A class that is tailored for a square"""
 
     def __init__(self, size=0):
-        "A class that represents a square"
+        """A class that represents a square
         Args:
             size: the size of the square
         Raises:
