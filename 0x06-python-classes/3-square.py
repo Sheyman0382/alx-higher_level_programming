@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A module that defines a square"""
 
+
 class Square:
     """A class that is tailored for a square"""
 
@@ -25,4 +26,4 @@ class Square:
         Calculates the area of the square
         Returns: the square of the class
         """
-        return self.__size **2
+        return self.__size ** 2
