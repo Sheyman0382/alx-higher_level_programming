@@ -38,12 +38,13 @@ class Node:
             raise TypeError("next node must be a Node object")
         self.__next_node = value
 
-class SinglyLinkedList:
-    """Defines a singly linkesd list"""
 
+"""Defines a singly linked list"""
+
+
+class SinglyLinkedList:
     def __init__(self):
         """creates an empty singly linked list"""
-
         self.__head = None
 
     def __str__(self):
@@ -60,7 +61,7 @@ class SinglyLinkedList:
         """inserts node in a sorted way
         Args:
             value: the data of each node
-	"""
+        """
         new_node = Node(value)
         temp = self.__head
         if self.__head is None:
