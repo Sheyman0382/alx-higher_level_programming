@@ -45,13 +45,13 @@ class Node:
 class SinglyLinkedList:
     def __init__(self):
         """creates an empty singly linked list"""
-        self.head = None
+        self.__head = None
 
     def __str__(self):
         """make list printable"""
 
         printll = ""
-        temp = self.head
+        temp = self.__head
         while temp:
             printll += str(temp.data) + "\n"
             temp = temp.next_node
@@ -63,13 +63,13 @@ class SinglyLinkedList:
             value: the data of each node
         """
         new_node = Node(value)
-        temp = self.head
-        if self.head is None:
-            self.head = new_node
+        temp = self.__head
+        if self.__head is None:
+            self.__head = new_node
             return
-        if value < self.head.data:
-            new_node.next_node = self.head
-            self.head = new_node
+        if value < self.__head.data:
+            new_node.next_node = self.__head
+            self.__head = new_node
             return
 
         while temp.next_node is not None:
