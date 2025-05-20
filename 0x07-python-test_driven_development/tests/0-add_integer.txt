@@ -1,0 +1,23 @@
+from 0-add_integer import add_integer
+
+>>> add_integer(3)
+101
+
+>>> add_integer(3, 2)
+5
+
+>>> add_integer("help", 3)
+Traceback (most recent call last)
+	...
+TypeError: a must be an integer
+
+>>> add_integer(2, "help")
+Traceback (most recent call last)
+	...
+TypeError: b must be an integer
+
+>>> add_integer(-3, -4)
+-7
+
+>>> add_integer(92.5, -2)
+90

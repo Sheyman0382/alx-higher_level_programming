@@ -1,0 +1,18 @@
+>>> say_my_name("Seyi", "Adegbite")
+My name is Seyi Adegbite
+
+>>> say_my_name("Seyi")
+My name is Seyi
+
+>>> say_my_name(12, "Ola")
+Traceback (most recent call last)
+	...
+TypeError: first_name must be a string
+
+>>> say_my_name("Ola", 15)
+Traceback (most recent call last)
+	...
+TypeError: last_name must be a string
+
+>>> say_my_name("", "")
+My name is 
