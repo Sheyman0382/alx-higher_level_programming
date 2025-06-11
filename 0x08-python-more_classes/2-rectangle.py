@@ -32,7 +32,7 @@ class Rectangle:
         self.__width = value
 
     @property
-    def heigth(self):
+    def height(self):
         """retrieves height attribute"""
         return self.__height
 
