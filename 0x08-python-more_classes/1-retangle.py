@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """A module that creates a rectangle class"""
 
 
@@ -8,10 +7,14 @@ class Rectangle:
 
         """A class that creates a rectangle class
         Args:
-        width: the rectangle width
-        height: height of the rectangle
-        Return: both width and height
+            width: the rectangle width
+            height: height of the rectangle
+        Raises:
+            ValueError: when width or height is negative
+			TypeError: when width or height is not an integer
         """
+        self.width = width
+		self.height = height
 
     @property
     def width(self):
