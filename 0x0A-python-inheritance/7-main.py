@@ -20,3 +20,7 @@ try:
     bg.integer_validator("distance", -4)
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
+
+#bg.integer_validator("float", 0.53)
+bg.integer_validator("shey")
+bg.integer_validator("fab", 1, 3)
