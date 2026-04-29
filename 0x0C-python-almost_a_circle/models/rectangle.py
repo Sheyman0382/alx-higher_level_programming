@@ -81,3 +81,9 @@ class Rectangle(Base):
             if i < self.height - 1:
                 rectangle += "\n"
         print(rectangle)
+
+    def __str__(self):
+        """returns string format of an instance/object"""
+
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
