@@ -77,7 +77,7 @@ class Rectangle(Base):
         rectangle = ""
         for i in range(self.height):
             for j in range(self.width):
-                result += "#"
+                rectangle += "#"
             if i < self.height - 1:
                 rectangle += "\n"
         print(rectangle)
