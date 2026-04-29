@@ -74,13 +74,10 @@ class Rectangle(Base):
     def display(self):
         """prints the shape of the rectangle to the stdout with "#" """
 
-        rectangle = ""
+        for i in range(self.y):
+            print("")
         for i in range(self.height):
-            for j in range(self.width):
-                rectangle += "#"
-            if i < self.height - 1:
-                rectangle += "\n"
-        print(rectangle)
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """returns string format of an instance/object"""
