@@ -70,3 +70,14 @@ class Rectangle(Base):
         """This function comptes the area of a rectangle"""
 
         return self.width * self.height
+
+    def display(self):
+        """prints the shape of the rectangle to the stdout with "#" """
+
+        rectangle = ""
+        for i in range(self.height):
+            for j in range(self.width):
+                result += "#"
+            if i < self.height - 1:
+                rectangle += "\n"
+        print(rectangle)
