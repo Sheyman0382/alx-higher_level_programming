@@ -8,8 +8,8 @@ from models.base import Base
 class TestRectangle(unittest.TestCase):
     """Tests the functionality/edge cases for rectangle class"""
 
-    def set_up(self):
-        Base. _Base.__nb_objects = 0
+    def setUp(self):
+        Base._Base__nb_objects = 0
 
     def test_default_ids(self):
         """defaut condition of the rectangle class"""

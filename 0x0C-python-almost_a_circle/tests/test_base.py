@@ -6,7 +6,7 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
     """A test class to test the base class functionality/edge cases"""
-    def setup(self):
+    def setUp(self):
         Base._Base__nb_objects = 0
 
     def test_default(self):

@@ -2,10 +2,14 @@
 """Test case module for __str__ function"""
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
 
 
 class Test_str(unittest.TestCase):
     """Testing for the default use of __str__"""
+
+    def setUp(self):
+        Base._Base__nb_objects = 0
 
     def test_default(self):
         """Default testing"""
