@@ -86,6 +86,8 @@ class Rectangle(Base):
             self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
+        """Assigns attributes using positional arguments"""
+
         update_list = ["id", "width", "height", "x", "y"]
         for i in range(len(args)):
             if i >= 5:
