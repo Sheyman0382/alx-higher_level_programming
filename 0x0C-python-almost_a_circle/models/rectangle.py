@@ -88,4 +88,6 @@ class Rectangle(Base):
     def update(self, *args):
         update_list = ["id", "width", "height", "x", "y"]
         for i in range(len(args)):
+            if i >= 5:
+                break
             setattr(self, update_list[i], args[i])
