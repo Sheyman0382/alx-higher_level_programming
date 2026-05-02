@@ -46,4 +46,5 @@ class Square(Rectangle):
     def to_dictionary(self):
         """retrns the dictionary of an instance"""
 
-        return self.__dict__
+        dic = {"id" : self.id, "x" : self.x, "y" : self.y, "size": self.size}
+        return dic
