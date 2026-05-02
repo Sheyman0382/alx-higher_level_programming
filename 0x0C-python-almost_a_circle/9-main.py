@@ -8,6 +8,10 @@ if __name__ == "__main__":
     print(s1)
     print(s1.area())
     s1.display()
+    print(s1.__dict__)
+    print(s1.size)
+    print("_____")
+    print(Square.__dict__)
 
     print("---")
 
