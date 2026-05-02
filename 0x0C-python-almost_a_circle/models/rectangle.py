@@ -85,11 +85,15 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns attributes using positional arguments"""
 
-        update_list = ["id", "width", "height", "x", "y"]
-        for i in range(len(args)):
-            if i >= 5:
-                break
-            setattr(self, update_list[i], args[i])
+        if args:
+            update_list = ["id", "width", "height", "x", "y"]
+            for i in range(len(args)):
+                if i >= 5:
+                    break
+                setattr(self, update_list[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
