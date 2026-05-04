@@ -46,3 +46,11 @@ class Base:
                     list_dictionaries.append(obj.to_dictionary())
                 json_string = cls.to_json_string(list_dictionaries)
             file_1.write(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create method"""
+
+        dummy_instance = cls(1, 1)
+        dummy_instance.update(**dictionary)
+        return dummy_instance
