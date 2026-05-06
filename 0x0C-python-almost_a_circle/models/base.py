@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A base class module"""
 import json
+import os
 
 
 class Base:
@@ -54,6 +55,21 @@ class Base:
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(1, 1)
         else:
-            dummy_instance= cls(1)
+            dummy_instance = cls(1)
         dummy_instance.update(**dictionary)
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """A class method that loads a json string from the file"""
+
+        file_name = "{}.json".format(cls.__name__)
+        if not os.path.exists(file_name):
+            return []
+        with open(file_name, "r", encoding="utf-8") as file_1:
+            json_string = file_1.read()
+            list_of_dict = cls.from_json_string(json_string)
+            list_of_instances = []
+            for dict_obj in list_of_dict:
+                list_of_instances.append(cls.create(**dict_obj))
+            return list_of_instances
