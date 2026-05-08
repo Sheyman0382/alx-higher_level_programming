@@ -2,6 +2,7 @@
 """A base class module"""
 import json
 import os
+import csv
 
 
 class Base:
@@ -73,3 +74,63 @@ class Base:
             for dict_obj in list_of_dict:
                 list_of_instances.append(cls.create(**dict_obj))
             return list_of_instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ """
+
+        file_name = "{}.csv".format(cls.__name__)
+
+        list_obj_attr = []
+        values = []
+
+        for obj in list_objs:
+            list_obj_attr.append(obj.to_dictionary())
+        with open(file_name, "w", newline="") as file_1:
+            for obj in list_obj_attr:
+                writer = csv.writer(file_1)
+                if cls.__name__ == "Rectangle":
+                    writer.writerow([
+                        obj["id"],
+                        obj["width"],
+                        obj["height"],
+                        obj["x"],
+                        obj["y"]
+                    ])
+                else:
+                    writer.writerow([
+                        obj["id"],
+                        obj["size"],
+                        obj["x"],
+                        obj["y"]
+                    ])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        filename = cls.__name__ + ".csv"
+
+        if not os.path.exists(filename):
+            return []
+        with open(filename, "r", newline="") as f:
+            reader = csv.reader(f)
+            objects = []
+            for row in reader:
+                if cls.__name__ == "Rectangle":
+                    d = {
+                        "id": int(row[0]),
+                        "width": int(row[1]),
+                        "height": int(row[2]),
+                        "x": int(row[3]),
+                        "y": int(row[4])
+                    }
+
+                elif cls.__name__ == "Square":
+                    d = {
+                        "id": int(row[0]),
+                        "size": int(row[1]),
+                        "x": int(row[2]),
+                        "y": int(row[3])
+                    }
+                obj = cls.create(**d)
+                objects.append(obj)
+            return objects
